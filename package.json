@@ -1,0 +1,32 @@
+{
+  "name": "webpack-promise",
+  "version": "1.1.1",
+  "description": "Webpack as a Promise",
+  "main": "js/index.js",
+  "scripts": {
+    "gulp": "babel-node \"$(which gulp)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanwimmer128/webpack-promise.git"
+  },
+  "author": "Stefan Wimmer <info@stefanwimmer128.eu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanwimmer128/webpack-promise/issues"
+  },
+  "homepage": "https://github.com/stefanwimmer128/webpack-promise#readme",
+  "dependencies": {
+    "core-js": "^2.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^7.0.0-alpha.20",
+    "babel-preset-env": "^2.0.0-alpha.20",
+    "del": "^3.0.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-babel": "^7.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "3"
+  }
+}
