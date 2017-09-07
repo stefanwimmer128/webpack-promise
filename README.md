@@ -12,7 +12,6 @@ webpack({
 }, {
     /* other options, defaults */
     log: true, /* log results */
-    rejectStats: true, /* If true stats object, if false a WebpackCompilationError will be rejected on error */
     stats: {
         /* options for stats.toString() */
         colors: true,
@@ -20,19 +19,17 @@ webpack({
 });
 ```
 
-## Gulp.js
-
-As a promise this can be used with Gulp.js.
+## Error Handling
 
 ``` javascript
-import gulp from "gulp";
-import webpack from "webpack-promise";
-
-gulp.task("webpack", () =>
-    webpack({
-        /* webpack config */
-    }, {
-        rejectStats: false, /* prevents gulp from throwing stats object as error */
-    }),
-);
+webpack(/* see usage */).catch(function (err)
+{
+    if (err.err())
+        /* runtime error */
+    else if (err.stats().hasErrors())
+        /* compilation error */
+    else if (err.stats().hasWarnings())
+        /* compilation warning */
+    /* see webpack api for details */
+});
 ```

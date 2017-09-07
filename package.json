@@ -1,8 +1,8 @@
 {
   "name": "webpack-promise",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Webpack as a Promise",
-  "main": "js/index.js",
+  "main": "js",
   "scripts": {
     "gulp": "babel-node \"$(which gulp)\""
   },
