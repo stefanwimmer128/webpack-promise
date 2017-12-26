@@ -1,4 +1,4 @@
-# weebpack-promise
+# webpack-promise
 
 Webpack as a Promise
 
